@@ -1,16 +1,16 @@
-DROP TABLE IF EXISTS user;
-CREATE TABLE user (
-  id         INT AUTO_INCREMENT NOT NULL,
-  name      VARCHAR(128) NOT NULL,
-  latitude     DECIMAL(11,8) NOT NULL,
-  longitude      DECIMAL(11,8) NOT NULL,
-  PRIMARY KEY (`id`)
+DROP TABLE IF EXISTS location,location_history;
+CREATE TABLE location (
+    name VARCHAR(16) PRIMARY KEY,
+    latitude DOUBLE NOT NULL,
+    longitude DOUBLE NOT NULL,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO user
-  (name, latitude, longitude)
-VALUES
-  ('Blue Train', 13.123, 25.123),
-  ('Giant Steps', 14.123, 24.123),
-  ('Jeru', 15.123, 23.123),
-  ('Sarah Vaughan', 16.123, 22.123);
+CREATE TABLE location_history (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(16) NOT NULL,
+    latitude DOUBLE NOT NULL,
+    longitude DOUBLE NOT NULL,
+    recorded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
