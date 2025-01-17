@@ -8,6 +8,10 @@ It consists of two services:
 1. **Location Service** – Handles location updates and user search by proximity.  
 2. **Location History Service** – Records historical data and calculates the distance traveled by users over a period of time.
 
+## Overview of app structure
+![image](https://github.com/user-attachments/assets/f6551bab-9235-4310-9cb6-104dc411e3fe)
+
+
 ## Features
 
 - **Update User Location** (`POST /locations`)  
