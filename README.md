@@ -26,7 +26,7 @@ It consists of two services:
 
 ### 1. Clone the Repository
 
-git clone https://github.com/your-username/location-tracking-system.git
+git clone https://github.com/your-username/location-service.git
 cd location-tracking-system
 
 ### 2. Set Up Environment Variables:
